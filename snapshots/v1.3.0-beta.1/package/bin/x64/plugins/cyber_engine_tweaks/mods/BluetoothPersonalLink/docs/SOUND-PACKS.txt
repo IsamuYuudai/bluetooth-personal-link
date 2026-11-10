@@ -1,0 +1,58 @@
+BLUETOOTH PERSONAL LINK 1.3.0 BETA - ADD YOUR OWN SOUNDS
+
+Quick setup
+1. Install the main mod with Vortex, enable it and Deploy Mods.
+2. Inside the game's bin\x64\plugins\cyber_engine_tweaks\mods\BluetoothPersonalLink folder,
+   put your recordings in audio-inbox\connected or audio-inbox\disconnected.
+3. Close Cyberpunk. Run docs\tools\Manage-Audio.cmd. Use Open Inbox to open the sound
+   folder. Select Connected or Disconnected, then Import. The tool detects the game
+   and generates the sound IDs, audio manifest and clips.json selection automatically.
+4. Fully restart Cyberpunk. Open Mods > Bluetooth Personal Link, or its CET panel,
+   click Test connection sound, then close the menus to hear it.
+
+Use short .wav, .mp3, .ogg or .flac recordings, no more than 20 MiB each. Up to 128
+unique recordings per connection/disconnection list are supported. Use recordings
+you own or have permission to use. Subfolders are not scanned. The importer checks
+basic file headers; Audioware validates decoding at the next game start.
+
+The importer keeps original inbox files, makes backups of the old list/manifest,
+uses content hashes to prevent duplicates, and writes the imported bank only to
+r6\audioware\BluetoothPersonalLinkUserAudio. Generated manifest entries start at
+volume 1.0. Volume and Notification boost in the mod settings control playback
+without changing your game's overall audio volume. Start with a low boost.
+Append keeps existing selections; Replace changes the selected list only.
+The other list and your mod settings are preserved.
+
+In-game controls
+Native Settings is optional. With it installed, look in Mods > Bluetooth Personal
+Link. Unified Mod Settings can show the same Native Settings tab. This integration
+adds no required dependency. The CET panel remains available with instructions,
+volume/boost/cooldown controls, a test button, saved settings and diagnostics.
+CET controls use Save settings. Native Settings changes save immediately.
+
+Reload sound selections reads clips.json again and scans the two inbox folders.
+Detected files are recorded in audio-inbox\pending-import.json with default volume
+1.0. This is an import plan, not a loaded Audioware bank. Manage Audio performs the
+actual import. Existing registered event selections can change during gameplay.
+
+Adding new files during gameplay
+Stable Audioware loads sound banks on game startup. Reload sound selections and
+CET Reload all mods do not register a newly added audio file. A full game restart
+is required after import. This release does not install Audioware's DEV_ONLY build
+or claim crash-free live bank replacement. Do not delete or alter active audio
+files while the game is running.
+
+Manual sound packs
+A pack needs valid event definitions in r6\audioware\<UniquePack>\audios.yaml and
+matching event IDs in the connected/disconnected arrays of clips.json. Keep event
+IDs unique, using letters, digits and underscores. The included import tool is
+recommended because it generates both files consistently. The public package
+contains only its documented cleared starter recording; optional recordings
+provided privately by your crew are a separate personal add-on.
+
+Uninstall
+In Vortex, Disable or Remove the main mod, then Deploy Mods. Preserve your own
+inbox files and importer backups. Imported user audio is managed separately;
+close the game before removing r6\audioware\BluetoothPersonalLinkUserAudio.
+Removing that bank while an older clips.json still refers to it leaves missing
+selections; restore a saved list or reinstall the public default package.

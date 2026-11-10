@@ -1,0 +1,64 @@
+BLUETOOTH PERSONAL LINK1.3.0-beta.1 - AI-ASSISTED SOURCE SAFETY REVIEW
+CANDIDATE / LIVE REGRESSION PENDING
+
+Result: no evidence of malicious behavior was found in the reviewed source and
+public staging contents. This is an AI-assisted, scope-limited review of the same
+project, not independent security certification or proof of absolute safety.
+No new antivirus, VirusTotal or Nexus acceptance result is claimed here.
+
+Frozen init.lua SHA256:
+1203C0AD52E3DCA607B388D620AA9DF550A4BD5721FBF7BC61B5980BDD0A35E9
+
+Runtime addon scope:
+- Observes local device initiation/completion and player lifecycle; does not wrap
+  gameplay or change quests, save state, network sync, pause or time dilation.
+- Reads fixed settings.json/clips.json; explicit settings controls/API save only
+  this mod's settings. Explicit Reload sound selections can write a bounded
+  audio-inbox/pending-import.json plan; it cannot register or execute new audio.
+- Uses Audioware local playback; stop/resume targets only the retained own event.
+  Event IDs, filename inputs, pool size, duration and user settings are validated.
+- No network client, telemetry, credentials/browser access, OS command execution,
+  runtime native DLL loader, dynamic code evaluation, updater, capture, registry
+  changes, scheduled task, service or OS startup registration was found in Lua.
+  os.time seeds its private shuffle/cooldown; it is not a process-launch call.
+
+Optional installed tools are explicitly different from the Lua addon:
+- Manage-Audio.cmd starts the readable PowerShell manager only on double-click.
+  It uses NoProfile/STA, hides its console while showing Forms, and applies
+  ExecutionPolicy Bypass only to that child process; it does not persist a policy
+  change, request elevation, alter antivirus or create an exclusion.
+- Manage-Audio.ps1 loads Windows Forms/Drawing, walks parent directories to find
+  the game, opens Explorer only on Open Inbox, and calls the adjacent reviewed
+  importer in an asynchronous runspace only after the user clicks Import. No
+  resident helper/autostart, downloader, microphone or screen capture is used.
+- Import-BPLAudio.ps1 reads selected local recordings, checks headers/hash/size,
+  preserves originals and old recordings, and writes only a checked game-root
+  clips.json plus managed user bank/backups. It rejects running-game imports,
+  linked targets, unexpected manifests and changed inputs. Temporary-file deletion
+  is limited to its exact generated temporary path. It is not an all-files atomic
+  transaction: interruption can retain audio/backups, which should be kept.
+
+Opt-in developer tools in the Creator Kit:
+- Test-Bluetooth.ps1 uses Add-Type/PInvoke to load the trusted Lua5.3 DLL explicitly
+  supplied by the developer. No DLL is bundled. A Lua CLI test path is also given.
+- Lua tests load this local reviewed addon/test source; importer tests execute the
+  local importer against generated fixtures. The manager test extracts its reviewed
+  function definitions and mocks process lookup only in isolated write fixtures.
+  These test-only evaluation/native calls never run during installation/gameplay.
+
+Evidence:52 actual-source mocked Lua groups,11 importer groups and12 manager
+groups passed on the frozen candidate; PowerShell utilities were exercised with
+Windows PowerShell5.1. Sanitized detailed reports are in evidence/. New gameplay,
+visible-window and audible regression testing is still pending. Earlier1.2
+physical-port playback results are not relabeled as current candidate results.
+
+Only one recording is included: the documented+10dB CC0 edit/re-encode of gecop's
+Marshall Tufton recording. Its bytes match the previously validated public asset.
+No private bank, private event IDs, logs, captures, fixtures, parser/framework/game
+binaries, machine paths, account data or download tokens belong in this kit.
+Code/docs/tools are MIT; audio has its separate CC0 dedication and courtesy credit.
+Predominantly AI-generated code/UI/docs/tools/tests are explicitly disclosed.
+
+This review does not determine why any previous archive was quarantined by a site.
+Submit these transparent files to normal Nexus scanning/moderation and seek review
+when necessary; do not disguise code or bypass security controls.

@@ -1,0 +1,54 @@
+1.2.0-beta.6 - optional notification boost
+- Adds a bounded Audio boost (dB) control from 0 to 24 dB, with zero extra boost
+  by default. Existing settings without gainDb retain the prior playback level.
+- Applies gain only to this addon's per-sound settings, for the next playback.
+  No source recording or game-wide volume setting is modified by this control.
+- Keeps tracked menu recovery, normal-rate playback and local-only behavior.
+- Automated checks cover gain defaults, numeric limits, persistence, runtime
+  reload, UI changes and both tracked and ordinary fallback playback.
+- A normal physical access-point connection verified +20 dB gain in the recorded output; the tester confirmed the volume.
+
+1.2.0-beta.4 - connection-audio menu recovery
+- Uses a tracked DynamicSoundEvent for connection audio and targets that sound
+  for resume after Audioware pauses it on menu entry. It does not resume
+  unrelated sounds or change game/NightCoop pause state.
+- Applies the same targeted request if a connection sound is queued while
+  Audioware's menu state is already active.
+- Manual previews still wait for CET and game menus to close and gameplay to
+  be unpaused. Ordinary fallback playback lacks the targeted menu protection.
+- Intended to address connection audio interrupted by a breach/menu transition.
+- Verified actual chime output from a normal access-point Jack In interaction
+  while the breach screen opened on 8 November 2026. One connection produced
+  one announcement through tracked playback and one targeted resume request.
+- This test covers one Watson/Northside access point, not every story prop,
+  vehicle, framework version or live multiplayer session.
+
+1.2.0-beta.3 - louder starter chime
+- Raises the real CC0 starter recording by 10 dB and re-encodes the MP3.
+- Audio validation preserves separate original and edited hashes, with no
+  clipping and a measured -2.4 dBFS true peak for the edited file.
+- Retains the queued-preview safeguards, settings controls and diagnostics.
+- Louder-media preview was subsequently verified through a game-loopback
+  capture on 8 November 2026. Physical-port audio was not confirmed by that test.
+
+1.2.0-beta.2 - preview playback safeguards and diagnostics
+- Explicitly sets normal playback rate, start position, panning and loop state
+  instead of relying on default values on CET-created audio settings objects.
+- Keeps native duration/playback errors available for diagnosing silent previews.
+- Makes the preview result more prominent in the settings panel and CET log.
+- Queues one preview until CET and game menus are closed and gameplay is
+  unpaused, with a 30-real-second expiry and cancellation on disable/reset.
+- Checks menu state independently of pause state for NightCoop compatibility.
+- Adds read-only diagnostic() output for audio registration and playback state.
+- Prepared after a silent-preview report, with audible validation pending then.
+
+1.2.0-beta.1 - standalone public beta
+- Standalone distribution with a permission-cleared CC0 starter chime.
+- CET overlay controls and explicit settings saving.
+- User-owned sound packs and an optional offline importer in the creator kit.
+- Independent code licence, source package, credits and publication notes.
+- Keeps shuffled selection, duplicate protection and local-player filtering.
+
+Offline source/media checks, preview validation and the access-point playback
+test cover separate scopes. Wider compatibility still requires in-game tests.
+No public upload was performed.

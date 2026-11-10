@@ -1,0 +1,42 @@
+BLUETOOTH PERSONAL LINK 1.3.0-beta.1 - SOURCE OVERVIEW
+
+Runtime: a CET Lua addon observes initiation and completed local personal-link
+connections. Local entity/device guards suppress NPC and remote-replica events.
+It selects a registered Audioware event from a bounded shuffle bag, validates
+duration/settings, avoids overlap and controls only its retained sound handle.
+It observes gameplay methods; it does not replace device, quest or network logic.
+
+The addon reads fixed settings.json and clips.json. Explicit CET saves, API saves
+and optional Native Settings changes write only its settings.json. An explicit
+Reload sound selections scans two fixed inbox directories and may write their
+bounded pending-import.json plan. Filenames and event IDs are constrained. A
+pending plan does not register sound files or run the importer. Optional Native
+Settings integration saves controls immediately; synchronization has a reentrancy
+guard. Unified Mod Settings can aggregate that tab. CET remains the fallback.
+
+Playback uses Audioware DynamicSoundEvent when available and AudioSystemExt as
+the documented fallback. Volume is0-1 and extra gain0-24dB. Source media/global
+audio settings are unchanged. Targeted menu recovery resumes only the addon's
+own event. Manual preview waits until menus/CET close. The addon reads pause/menu
+state but never changes world pause, time dilation, NightCoop state or saves.
+
+Optional tools are launched explicitly outside the game:
+- Manage-Audio.cmd starts readable Windows PowerShell with a visible Forms window.
+- Manage-Audio.ps1 discovers a parent game path, validates local inputs, opens
+  Explorer only from Open Inbox, and invokes the reviewed importer in a local
+  asynchronous PowerShell runspace after Import. No downloader is used.
+- Import-BPLAudio.ps1 validates local recordings, uses content-hash event IDs,
+  backs up existing selections/manifests, copies audio into a separate managed
+  bank and replaces the selected clips.json pool. It refuses a running target
+  game, unsafe linked targets and unmanaged/externally edited manifests.
+- Import text commits are individually atomic. The whole multistep import is not
+  a transactional rollback; an interruption may leave retained audio/backups.
+  Keep those files for inspection/restoration. Old recordings are not deleted.
+
+New banks are read by stable Audioware on full startup. No development-only
+hot-reload build, hook, executable or framework binary is distributed.
+
+Tests use isolated mock game/audio/UI objects and dummy local game directories.
+Developer tests may load a user-supplied trusted Lua5.3 DLL through a small
+readable P/Invoke harness, or use a separately installed Lua CLI. Neither path is
+automatic. No parser DLL, real-game data, fixture output or capture is bundled.

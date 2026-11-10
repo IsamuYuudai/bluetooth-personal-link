@@ -1,0 +1,61 @@
+{
+  "version": "1.2.0-beta.6",
+  "gameTarget": "Cyberpunk 2077 2.5",
+  "preparedUtc": "2026-11-08T15:50:26.6765046Z",
+  "luaSourceSHA256": "79E42CC9BD4739D4FA59935A8FAE44AB96F3F7DAF0CEE79708BA1372731E0856",
+  "luaBehavioralGroups": 45,
+  "importerSHA256": "B897D013E1419200053038A2BDA527BA69F92CB9B682622FA48500AEB649D61C",
+  "importerBehavioralGroups": 11,
+  "importerRuntimeTest": "PowerShell 7.6.9",
+  "windowsPowerShell51": "Syntax checked; full final runtime suite not claimed",
+  "includedAudio": {
+    "file": "starter_chime.mp3",
+    "creator": "gecop",
+    "source": "https://freesound.org/people/gecop/sounds/545028/",
+    "license": "CC0 1.0",
+    "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "originalSourceSHA256": "B4A6F90C02E781383826CA85E95EE32134C324327E37D50A9E5F920F5AC3F190",
+    "derivedMediaSHA256": "0469066EB42C3BA28CC3340F637A596F986A5F0D86ABFED8406CD8B59F8D676F",
+    "sha256": "0469066EB42C3BA28CC3340F637A596F986A5F0D86ABFED8406CD8B59F8D676F",
+    "gainDb": 10,
+    "seconds": 2.0792083333333333,
+    "truePeakDbFS": -2.4
+  },
+  "inGameQA": "Verified scope: beta.3 louder-media preview, beta.4 normal Jack In and beta.6 boosted notification at one Watson/Northside access point, including the breach-screen transition. Story props, vehicles, other framework combinations and live multiplayer remain unverified.",
+  "nativeUIRendering": "Settings and diagnostic controls operated in game; general layout certification not claimed",
+  "audiblePlayback": "Recorded-output verification: beta.3 preview correlation 0.92235; beta.4 physical access-point chime on 2026-11-08 at 15:28:36 UTC, full correlation 0.48854 under louder game effects, aligned late-sector correlations 0.936 and 0.818. Perceived loudness is not independently certified.",
+  "physicalPortQA": {
+    "testedUtc": "2026-11-08T15:28:36Z",
+    "location": "One Watson/Northside access point",
+    "interaction": "Normal F Jack In; breach screen opened",
+    "capture": "physical-jack-beta4-09",
+    "captureStartedUtc": "2026-11-08T15:28:28.7122639Z",
+    "captureEndedUtc": "2026-11-08T15:28:48.7129569Z",
+    "connectionCompletedUtc": "2026-11-08T15:28:36Z",
+    "announcementsDelta": 1,
+    "menuResumeRequestsDelta": 1,
+    "backend": "dynamic",
+    "lastIssue": false,
+    "fullCorrelation": 0.4885384755136645,
+    "matchedOffsetSeconds": 7.882,
+    "alignedSectorCorrelations": [
+      0.936,
+      0.818
+    ],
+    "interpretation": "Coherent recorded chime across the clip, mixed under louder breach/game effects; not a subjective audibility or universal compatibility claim"
+  },
+  "previewRegression": "The +10 dB CC0 starter preview works in game. Beta.4 physical-port recovery was verified for the tested access point: it resumes only its own DynamicSoundEvent after menu entry or if queued while that menu state is active. Manual previews still wait for menus to close. The fallback applies when the Dynamic factory is unavailable and does not guarantee every older framework hook.",
+  "notificationGain": {
+    "minimumDb": 0,
+    "maximumDb": 24,
+    "defaultDb": 0,
+    "scope": "Only this addon per-sound settings; next playback",
+    "mediaChanged": false,
+    "globalVolumeChanged": false,
+    "runtimeQA": "Verified beta.6 physical access-point connection on 2026-11-08 at 15:46:33 UTC using separately supplied audio; complete phrase matched, full correlation 0.98025; measured increase 20.0233 dB; tester confirmed suitable volume"
+  },
+  "releaseBuildModifiesLiveGame": false,
+  "groupInstallerModified": false,
+  "nexusPublished": false,
+  "aiDisclosure": "OpenAI Codex-generated code/UI/utility/docs; real CC0 recorded audio"
+}

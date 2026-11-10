@@ -1,0 +1,7 @@
+version: 1.0.0
+sfx:
+  bpl_starter_chime:
+    file: starter_chime.mp3
+    usage: in-memory
+    settings:
+      volume: 1.0

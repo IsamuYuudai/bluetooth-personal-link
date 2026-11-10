@@ -1,0 +1,54 @@
+BLUETOOTH PERSONAL LINK - TECHNICAL OVERVIEW
+
+Runtime dependencies: CET and Audioware, plus their documented frameworks.
+No collection-specific Lua module, native DLL, server or network API is used.
+
+TRIGGER
+Device.TogglePersonalLink(true, puppet) records a pending device only when the
+puppet's entity ID matches Game.GetPlayer(). The later Device.OnTogglePersonalLink
+observer requires a completed event, a matching local executor, the same pending
+device and IsPersonalLinkConnected(). Only then is connection audio requested.
+This deliberately suppresses events whose ownership cannot be established.
+
+SELECTION
+clips.json supplies registered Audioware event IDs. A private PRNG fills a
+shuffle bag. Audio durations are queried to filter unavailable entries; failed
+playback is skipped. Complete audio failure does not commit the attempted bag
+or random state. The actual selected event and owner are retained for stopping.
+Cooldown and clip duration guard against overlapping announcements.
+
+AUDIO
+Tracked playback creates an Audioware.DynamicSoundEvent and queues it on the
+local player. AudioSettingsExt explicitly sets volume, normal playback rate,
+start position, panning, loop state and affectedByTimeDilation=false. Per-sound
+amplitude is volume * 10^(gainDb/20), with volume clamped to 0-1 and gainDb to
+0-24 dB. Gain defaults to zero and applies to the next notification without
+modifying source media, global volume settings or other sounds. The addon
+retains the owned handle and requests Resume for that handle after Audioware's
+OnMenu(true) pause, or when creating a sound while its cached menu state is true.
+It never resumes unrelated audio or changes game/NightCoop pause or time state.
+If the Dynamic factory is unavailable, ordinary AudioSystemExt playback remains
+available without targeted menu recovery. Missing hooks in older frameworks are
+not guaranteed to be detected by CET's observation API.
+
+Manual previews wait for CET and game menus to close and gameplay to be unpaused.
+One queued request expires after 30 real seconds and clears on disable or reset.
+The starter bank is declared in audios.yaml; a separate user bank can register
+additional names. Media is not converted or modified at runtime. New banks are
+loaded by Audioware at game startup.
+
+LIFECYCLE / UI
+Attach/detach observations and local-player checks clear stale connection state.
+The ImGui panel is drawn only while CET's overlay is open. Runtime changes are
+persisted only by Save settings or the saveSettings() API; only settings.json
+inside this mod is written. The separate importer edits user-selected local
+audio configuration while the target game is closed.
+
+VERIFICATION LIMITS
+Tests exercise real Lua through mocked game, audio and UI objects. They cover
+selection, cancellation, errors, reloads, persistence and targeted sound control,
+but cannot certify native hook delivery or framework behavior by themselves.
+On 8 November 2026, game-loopback captures verified the louder starter preview
+and tracked playback during a normal Jack In interaction at one Watson/Northside
+access point, including its breach-screen transition. This does not certify
+every listening setup, story prop, vehicle or live multiplayer session.

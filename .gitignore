@@ -1,0 +1,16 @@
+/outputs/
+/scratch/
+/private/
+/.private/
+/.env
+/.env.*
+/.vscode/
+/.idea/
+**/fixtures-*/
+**/audio-fixture-*/
+*.exe
+*.dll
+*.pdb
+*.log
+*.sqlite3
+*.user

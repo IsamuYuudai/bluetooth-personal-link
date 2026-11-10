@@ -1,0 +1,257 @@
+{
+  "schema": 1,
+  "version": "1.3.0-beta.1",
+  "kind": "creator",
+  "sourceRoot": "snapshots/v1.3.0-beta.1",
+  "originalArchive": {
+    "fileName": "Bluetooth-Personal-Link-Creator-Kit-v1.3.0-beta.1.zip",
+    "nexusFileId": 175774,
+    "bytes": 126413,
+    "sha256": "1F2861D830ED10DDAC2443DAC1FC7545C9E3209DB975436BA09CD46813D80369"
+  },
+  "outputFileName": "Bluetooth-Personal-Link-Creator-Kit-v1.3.0-beta.1-content-reproduction.zip",
+  "entryCount": 40,
+  "identityScope": "Each entry reproduces its original uncompressed file bytes. Replacement ZIP encoding and metadata differ; its container hash is not the original archive hash.",
+  "entries": [
+    {
+      "path": "ARCHITECTURE.txt",
+      "sourcePath": "ARCHITECTURE.txt",
+      "bytes": 2793,
+      "sha256": "555D50EAAAFEE9E60D22FBD1C7F84B09CDAE8E262FFE888C40E67D4EE030C030"
+    },
+    {
+      "path": "LICENSE.txt",
+      "sourcePath": "LICENSE.txt",
+      "bytes": 1317,
+      "sha256": "29E61499AE9DCD92E8708B12673311F80894354D76162D31B314C9CAA12C5C6C"
+    },
+    {
+      "path": "NEXUS-PAGE-DRAFT.txt",
+      "sourcePath": "NEXUS-PAGE-DRAFT.txt",
+      "bytes": 2251,
+      "sha256": "CE42F0441C64CD5E7AFD6B180C0FDDF5ED0CC7072827FEDA31DAE7B16155DB1B"
+    },
+    {
+      "path": "PUBLISHING-GUIDE.txt",
+      "sourcePath": "PUBLISHING-GUIDE.txt",
+      "bytes": 2140,
+      "sha256": "39E0AEFA2B035A84C95AE717050F32D7210ABDC0905FB287088B3CFD6782BE7D"
+    },
+    {
+      "path": "SAFETY-SOURCE-REVIEW.txt",
+      "sourcePath": "SAFETY-SOURCE-REVIEW.txt",
+      "bytes": 4246,
+      "sha256": "AB22FA6DFBBAD207A56233FD65343D2996F5239324271AE1FBBD9205F75B77AD"
+    },
+    {
+      "path": "SOURCE-README.txt",
+      "sourcePath": "SOURCE-README.txt",
+      "bytes": 1400,
+      "sha256": "9AE44FF622042CE3BDBE96934E8FBAB21666DC2116E08DA76BD471015A8D5159"
+    },
+    {
+      "path": "TESTING-GUIDE.txt",
+      "sourcePath": "TESTING-GUIDE.txt",
+      "bytes": 2459,
+      "sha256": "B5A75A01CEE148CCABEEE4BAD0EAD4FA16F17E2C2C9B6C804AC77C366DA3C009"
+    },
+    {
+      "path": "VALIDATION.json",
+      "sourcePath": "VALIDATION.json",
+      "bytes": 2260,
+      "sha256": "0FD4BB4A575D425C27FDC6E28AD70A5E048AFF66D5FAFD692A1BA3EFF570BAA2"
+    },
+    {
+      "path": "evidence/AUDIO-MANAGER-FIXTURE-RESULTS.json",
+      "sourcePath": "evidence/AUDIO-MANAGER-FIXTURE-RESULTS.json",
+      "bytes": 3094,
+      "sha256": "E79B12812EFDFE9B11CEFD8D1998104AB6D1326FE1429D14FF4706ADB31003B9"
+    },
+    {
+      "path": "evidence/IMPORTER-TEST-RESULTS.json",
+      "sourcePath": "evidence/IMPORTER-TEST-RESULTS.json",
+      "bytes": 1393,
+      "sha256": "60BC1B033F256489807FC2AAAD90237CE6BDD44FF662831B87CB55937EC7A250"
+    },
+    {
+      "path": "evidence/LUA-TEST-RESULTS.json",
+      "sourcePath": "evidence/LUA-TEST-RESULTS.json",
+      "bytes": 5873,
+      "sha256": "E121FE01F1C71D983BC80F6F633D8AD466AAC1E27D918A74454430588A190349"
+    },
+    {
+      "path": "evidence/STARTER-RIGHTS-AND-MEDIA.json",
+      "sourcePath": "evidence/STARTER-RIGHTS-AND-MEDIA.json",
+      "bytes": 958,
+      "sha256": "966FF7490D0E7A5316E8CDAA603A7232EE8BFED7824394DA82E4C5517419C74D"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/clips.json",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/clips.json",
+      "bytes": 105,
+      "sha256": "10141E89F96CA3477AAD1521D6386FA353C6A1D7466847E7DA70E1E7E18E614F"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/init.lua",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/init.lua",
+      "bytes": 31161,
+      "sha256": "1203C0AD52E3DCA607B388D620AA9DF550A4BD5721FBF7BC61B5980BDD0A35E9"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/settings.json",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/settings.json",
+      "bytes": 113,
+      "sha256": "463176A49067866DE0A7F29F5E69AB8845829757A2A3121C6722F0D0BD7D55D3"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/connected/READ-ME.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/connected/READ-ME.txt",
+      "bytes": 266,
+      "sha256": "E03463D01B58CB246C9D1295E81845CBA82B11EEE9927A50615423B6C89B2801"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/disconnected/READ-ME.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/disconnected/READ-ME.txt",
+      "bytes": 266,
+      "sha256": "E03463D01B58CB246C9D1295E81845CBA82B11EEE9927A50615423B6C89B2801"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/CHANGELOG.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/CHANGELOG.txt",
+      "bytes": 932,
+      "sha256": "BBB2FF66BD34D4B5D6CCA506A643CBA245E0ED505A8A1E92903C030A3C7AAFA4"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/LICENSE.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/LICENSE.txt",
+      "bytes": 1317,
+      "sha256": "29E61499AE9DCD92E8708B12673311F80894354D76162D31B314C9CAA12C5C6C"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/README.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/README.txt",
+      "bytes": 3001,
+      "sha256": "1DEFF1FE04AEF2FB3C3C0A6B452ECCA0A2FBC3ED09DE5CA2D7A7B3B3006C1A54"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/SOUND-PACKS.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/SOUND-PACKS.txt",
+      "bytes": 3566,
+      "sha256": "5D5863EDCD79E0882F12207B8C809183A966C0C7596E0E614D3A1080878996C2"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/THIRD-PARTY-NOTICES.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/THIRD-PARTY-NOTICES.txt",
+      "bytes": 1313,
+      "sha256": "43FB3B82D2B56CDC8FA53A922B41FD998E6CE3285903AC964D07126466F25D98"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/AUDIO-MANAGER-README.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/AUDIO-MANAGER-README.txt",
+      "bytes": 2280,
+      "sha256": "6CE9C88137F3312BBEDB8E280357D524D23A8EC137058EAB683D67324456D829"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Import-BPLAudio.ps1",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Import-BPLAudio.ps1",
+      "bytes": 12832,
+      "sha256": "B897D013E1419200053038A2BDA527BA69F92CB9B682622FA48500AEB649D61C"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.cmd",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.cmd",
+      "bytes": 273,
+      "sha256": "431960EDD178EB17B1ECDDBDA3B72D2084D715F7F1E4C29948D1394831FC7613"
+    },
+    {
+      "path": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.ps1",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.ps1",
+      "bytes": 12202,
+      "sha256": "251780F3F6B3EE2AAD9290E0570A8B5824850B8755E054F6FA18F35A5834AC3A"
+    },
+    {
+      "path": "package/r6/audioware/BluetoothPersonalLink/audios.yaml",
+      "sourcePath": "package/r6/audioware/BluetoothPersonalLink/audios.yaml",
+      "bytes": 122,
+      "sha256": "06E190D8CE16C2437BA7995C2E7671094F1F85B01869A5F8CECA6BF967488526"
+    },
+    {
+      "path": "package/r6/audioware/BluetoothPersonalLink/starter_chime.mp3",
+      "sourcePath": "package/r6/audioware/BluetoothPersonalLink/starter_chime.mp3",
+      "bytes": 51309,
+      "sha256": "0469066EB42C3BA28CC3340F637A596F986A5F0D86ABFED8406CD8B59F8D676F"
+    },
+    {
+      "path": "templates/audios.yaml.example",
+      "sourcePath": "templates/audios.yaml.example",
+      "bytes": 128,
+      "sha256": "54D3F38DBC53F100D574415E47E586C6356FB3E68BBD10A64D31A244A8C892BC"
+    },
+    {
+      "path": "templates/clips.example.json",
+      "sourcePath": "templates/clips.example.json",
+      "bytes": 106,
+      "sha256": "688DE1622098348311C772D0492237F7B17A47752B0E6E1E4BE37D28BBEDDD72"
+    },
+    {
+      "path": "tools/AUDIO-MANAGER-README.txt",
+      "sourcePath": "tools/AUDIO-MANAGER-README.txt",
+      "bytes": 2280,
+      "sha256": "6CE9C88137F3312BBEDB8E280357D524D23A8EC137058EAB683D67324456D829"
+    },
+    {
+      "path": "tools/IMPORT-AUDIO-HELP.txt",
+      "sourcePath": "tools/IMPORT-AUDIO-HELP.txt",
+      "bytes": 2824,
+      "sha256": "8DD3C78C5F28A20C8B989CAE25C44B86E9F54869A4F7133972EBCA8D59FC0110"
+    },
+    {
+      "path": "tools/Import-BPLAudio.ps1",
+      "sourcePath": "tools/Import-BPLAudio.ps1",
+      "bytes": 12832,
+      "sha256": "B897D013E1419200053038A2BDA527BA69F92CB9B682622FA48500AEB649D61C"
+    },
+    {
+      "path": "tools/Manage-Audio.cmd",
+      "sourcePath": "tools/Manage-Audio.cmd",
+      "bytes": 273,
+      "sha256": "431960EDD178EB17B1ECDDBDA3B72D2084D715F7F1E4C29948D1394831FC7613"
+    },
+    {
+      "path": "tools/Manage-Audio.ps1",
+      "sourcePath": "tools/Manage-Audio.ps1",
+      "bytes": 12202,
+      "sha256": "251780F3F6B3EE2AAD9290E0570A8B5824850B8755E054F6FA18F35A5834AC3A"
+    },
+    {
+      "path": "work/Test-AudioManager.ps1",
+      "sourcePath": "work/Test-AudioManager.ps1",
+      "bytes": 10111,
+      "sha256": "8453C82D1724443DE114F9BCDCB39ED7CDA505916D82CD00D98299B16F47D7A0"
+    },
+    {
+      "path": "work/importer-tests/Test-Importer.ps1",
+      "sourcePath": "work/importer-tests/Test-Importer.ps1",
+      "bytes": 10892,
+      "sha256": "83A76E64B41A66BA326AB9130B379BC630CACA182B41AF39CC7D0E546C9D378C"
+    },
+    {
+      "path": "work/tests/run-tests.lua",
+      "sourcePath": "work/tests/run-tests.lua",
+      "bytes": 457,
+      "sha256": "0DE6C440C6A686E24C303334D079EB2241453FB9D9CADDB732669E1EEAD964CD"
+    },
+    {
+      "path": "work/tests/test-bluetooth.lua",
+      "sourcePath": "work/tests/test-bluetooth.lua",
+      "bytes": 48147,
+      "sha256": "5B631FDFD29E5B894910C3A00F7805E5C007661F4BCC16ED0050FF40FF9F0D81"
+    },
+    {
+      "path": "work/tests/Test-Bluetooth.ps1",
+      "sourcePath": "work/tests/Test-Bluetooth.ps1",
+      "bytes": 4769,
+      "sha256": "9E026146E3EEDD72328EA5BF12095A29C3EB5E64AE9F31DA78C30DBD9F058195"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+version: 1.0.0
+sfx:
+  bpl_my_connection_01:
+    file: my_connection_01.wav
+    usage: in-memory
+    settings:
+      volume: 1.0

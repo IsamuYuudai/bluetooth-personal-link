@@ -1,0 +1,40 @@
+BLUETOOTH PERSONAL LINK 1.3.0-beta.1 - TESTS AND LIMITS
+
+Recorded candidate validation:
+-52 actual-addon Lua behavioral groups, using mocked game/audio/UI objects.
+-11 offline importer groups, rerun with Windows PowerShell5.1.
+-12 audio-manager groups, using actual Windows PowerShell5.1, read-only NoUI and
+ GUI-equivalent asynchronous import against dummy game/WAV fixtures. No form was
+ instantiated for these tests. Fixture process lookup is mocked for isolated
+ write tests; the shipped import code has no process-check bypass.
+
+Lua options (run from this Creator Kit directory):
+  lua work/tests/run-tests.lua
+or, with a separately installed trusted Lua5.3 DLL:
+  powershell.exe -NoProfile -File work/tests/Test-Bluetooth.ps1 -LuaLibraryPath "<trusted-local-Lua53-DLL>"
+No DLL or machine-specific library path is included. The PowerShell harness uses
+Add-Type/PInvoke to execute that explicitly supplied library. The addon itself
+does not use native-library loading or dynamic code evaluation.
+
+Utility fixtures:
+  powershell.exe -NoProfile -File work/importer-tests/Test-Importer.ps1
+  powershell.exe -NoProfile -File work/Test-AudioManager.ps1
+These tests create generated data only under their own work directories. Those
+outputs are not release files and must not be added to a public source archive.
+They do not launch the real game or Vortex, contact a server, or edit a live game.
+
+To validate your installed manager without a form or writes:
+  powershell.exe -NoProfile -File tools/Manage-Audio.ps1 -NoUI -GameFolder "<your-game-root>" -AudioFolder "<your-local-recordings>"
+This calls the importer's DryRun and does not prove Audioware can decode/play the
+recording. The actual import requires the target game to be completely closed.
+
+The previous1.2 beta playback/gain path was tested at one physical access point.
+This1.3 candidate adds settings/import UX. Its new live menu integration, audible
+regression, actual window interaction and full co-op behavior are still pending.
+Do not relabel mocked tests as successful gameplay tests.
+
+Later live checks: ordinary Jack In, cancellation, reconnect, preview through
+menus, settings toggle/save/reload, Native Settings with/without UMS, volume/boost,
+save/load, import then full restart, missing/invalid clip handling and uninstall.
+Record the actual game/framework versions and the paths tested. No universal
+quest, device, media-decoder, audio-output or multiplayer compatibility is claimed.

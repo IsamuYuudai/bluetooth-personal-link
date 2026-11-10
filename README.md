@@ -1,0 +1,21 @@
+# Bluetooth Personal Link — historical source for review
+
+Original author: **Isamu Yuudai**. This repository supplies the readable source and a content-reproduction route for Bluetooth Personal Link submissions 175773, 175774 and 175588. It also preserves the matching 1.2 main-package source associated with 175587. It is a source-review collection, not a new game-mod release or evidence of Nexus approval.
+
+The exact historical creator-kit files are under `snapshots/v1.3.0-beta.1/` (40 files) and `snapshots/v1.2.0-beta.6/` (26 files). Their `package/` directories contain every file from the corresponding main downloads. Original file bytes and licence notices are preserved. The `manifests/` files record original ZIP hashes, sizes and every uncompressed entry hash. Git attributes disable line-ending conversion in snapshots.
+
+There is **no compiled application, EXE, DLL, native plugin, framework binary or nested distribution archive** in either preserved creator kit or its matching main package. The addon is CET Lua. Optional utilities are readable PowerShell and a CMD launcher; their embedded native-interoperability wrapper source is included in the developer test runner. No compiler, game installation, account, network connection or external package is required to reproduce the archived source contents.
+
+Start with [BUILDING.md](BUILDING.md). The new builder validates all frozen files and produces ZIPs with the same uncompressed entry bytes. Its ZIP containers deliberately have different names, fixed timestamps and stored entries; **their SHA-256 values are not the historical submitted ZIP hashes**. The original packaging process was not deterministic. [ORIGINAL-ARTIFACTS.md](ORIGINAL-ARTIFACTS.md) lists the historical identities and limits of this reproduction.
+
+The snapshots include the complete shipped runtime source, importer/manager source, configuration, templates, developer tests and historical guides/results. Required Cyber Engine Tweaks, Audioware and game components remain separate dependencies with their own authors and licences. Their binaries were not distributed in these downloads, and their source is not represented as ours.
+
+The only included audio is the documented CC0 chime by **gecop**, in its historical +10 dB MP3 edit. No private voice bank, private recording, personal audio selection, capture, account data or real game binary is included. Two synthetic `ncc_bluetooth_personallink_*` fixture event labels remain in the exact beta6 test source because they were already present in that submitted kit. They do not include audio, registration banks or a user's actual clip list. The 1.3 tests use neutral `bpl_test_*` labels.
+
+Tests can create text files named `Cyberpunk2077.exe` inside dummy local directories; those text fixtures are not executables and are not shipped here. Test runners also overwrite their own reports. Always run them from a copied kit under ignored `outputs/test-work/`, as described in BUILDING.md. The optional PowerShell Lua harness needs a developer-supplied trusted Lua 5.3 DLL; no DLL is bundled. A separately installed Lua CLI is another option.
+
+Historical candidate records show 52 Lua, 11 importer and 12 manager fixture groups for 1.3, and 45 Lua/11 importer groups for beta6. These are mocked/local-fixture results. The snapshots' embedded `published=false`, pending scan and candidate statements describe their build-time state. Later submission or local-scan records do not turn those historical reports into new test results. No new gameplay, audible, visible-window, co-op or external malware scan is claimed by this repository.
+
+Code, UI, utilities, tests and historical documentation were predominantly generated with OpenAI Codex under human direction. **AI assistance: ChatGPT (OpenAI)** is tool acknowledgement only; Isamu Yuudai is the original author. The real CC0 chime is not AI speech. See [COMPONENTS.md](COMPONENTS.md) and [LICENSE.md](LICENSE.md) for the exact licence scopes. New code uses MIT; expressly identified new standalone guides use CC BY 4.0. Historical MIT grants and third-party rights are preserved.
+
+This repository contains no upload, publishing, updater or account-management action. The replacement builder only reads checked snapshots and writes new artifacts beneath `outputs/`.

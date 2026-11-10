@@ -1,0 +1,60 @@
+BLUETOOTH PERSONAL LINK - LOCAL AUDIO IMPORTER
+
+Import-BPLAudio.ps1 is an optional Windows PowerShell 5.1 / PowerShell 7 tool. It is not needed
+to run the mod's included starter sound. It never downloads or uploads audio.
+Supply recordings you own or have permission to use.
+
+1. Install the main Bluetooth Personal Link mod.
+2. Close Cyberpunk 2077.
+3. Put the recordings to import into a separate folder. Supported extensions:
+   .wav, .mp3, .ogg and .flac. Each file must be nonempty and no larger than
+   20 MiB. Subfolders are not scanned. Keep announcements short.
+4. In PowerShell, run the script with explicit paths, for example:
+
+   .\Import-BPLAudio.ps1 -GameFolder "D:\Games\Cyberpunk 2077" -AudioFolder "C:\MyAudio"
+
+   These paths are examples. Use your actual game and audio folders.
+
+If your Windows configuration blocks script files, use the mod's manual
+sound-pack instructions or an existing permitted PowerShell environment.
+This tool does not change execution policies or other Windows settings.
+
+The default Append mode adds unique recordings to the connection pool while
+retaining its existing starter sound. To use only the imported recordings:
+
+   .\Import-BPLAudio.ps1 -GameFolder "D:\Games\Cyberpunk 2077" -AudioFolder "C:\MyAudio" -Mode Replace
+
+To configure the optional disconnect pool instead, add:
+
+   -Kind Disconnected
+
+To see a plan without changing any files, add:
+
+   -DryRun
+
+Importing identical recordings again does not add duplicate entries. Content
+hashes generate safe filenames and event names. The importer checks file
+headers, but it is not a full media decoder; Audioware validates playback when
+the game starts. Bad or unplayable events are skipped by the mod.
+
+The script writes audio only under:
+   r6\audioware\BluetoothPersonalLinkUserAudio
+
+It updates only the selected pool in:
+   bin\x64\plugins\cyber_engine_tweaks\mods\BluetoothPersonalLink\clips.json
+
+Existing clips.json and managed audio manifests are backed up before importing.
+Backup filenames end in .bpl-backup-... so they are not loaded as manifests.
+The other pool, default audio, settings and original source recordings remain
+untouched. Existing imported audio is retained even in Replace mode.
+
+To restore a previous selection: close the game and copy the desired
+clips.json.bpl-backup-... file back over clips.json. If needed, also restore
+the matching audios.yaml backup over the user-audio audios.yaml. Keep backups.
+
+Fully restart the game after importing. CET Reload all mods alone does not load
+new Audioware sounds. Do not alter or remove active sound files during gameplay.
+
+This importer refuses to overwrite an unmanaged user-audio manifest or follow
+linked target directories. If it reports such a conflict, keep those files and
+resolve the layout manually; do not delete an unknown mod folder.

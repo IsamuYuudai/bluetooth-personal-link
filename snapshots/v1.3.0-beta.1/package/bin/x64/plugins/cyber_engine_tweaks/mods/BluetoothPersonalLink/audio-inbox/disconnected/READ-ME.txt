@@ -1,0 +1,4 @@
+Place short recordings you own or have permission to use in this folder.
+Supported: .wav .mp3 .ogg .flac, up to 20 MiB per file.
+Then close Cyberpunk and run ..\..\docs\tools\Manage-Audio.cmd.
+Choose the matching list and click Import. Restart the game afterwards.

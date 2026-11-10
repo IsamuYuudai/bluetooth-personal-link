@@ -1,0 +1,35 @@
+BLUETOOTH PERSONAL LINK 1.3.0-beta.1 - PUBLICATION CHECKLIST
+
+This is a staged candidate, not an already uploaded or live-tested1.3 release.
+Use the separate main ZIP as the installable Vortex file. The Creator Kit is an
+optional source/developer download. Do not install the outer kit into the game.
+
+Keep the main file's requirements explicit: CET, official Audioware and their
+documented prerequisites. Native Settings/Unified Mod Settings are optional.
+Nothing here installs frameworks automatically or grants Nexus Premium features.
+Retain install, enable, deploy, full-restart and remove instructions from README.
+
+The1.3 live regression status must remain pending until a real test is recorded.
+The included evidence differentiates52 Lua groups,11 importer groups and12 manager
+groups from earlier1.2 physical-port playback testing. Neither isolated tests nor
+a clean antivirus result is proof of universal compatibility or absolute safety.
+
+Keep MIT code/tool/docs notices and CC0 recording credit visible. Only the cleared
+starter recording is public. An audio import does not grant redistribution rights
+to third-party meme/YouTube/product recordings. No private voice pack is included.
+
+Declare AI use clearly: code, UI, tools, docs and tests were predominantly generated
+with OpenAI Codex under human direction. Complete the site's current AI disclosure
+and permissions fields and applicable AI tags. The real CC0 audio was not AI speech.
+Use original images/screenshots only when rights and their AI disclosure are clear.
+
+Allow Nexus's normal safety scanning and moderation. The readable PowerShell/CMD
+tools and opt-in native-interoperability test runner are disclosed in the source
+review. No reason for any automated quarantine is assumed without site feedback.
+Do not weaken security settings, disguise code or bypass a quarantine to publish.
+
+Relevant official policy pages for the final uploader to recheck:
+https://help.nexusmods.com/article/28-file-submission-guidelines
+https://help.nexusmods.com/article/180-ai-policy-changes-2026
+
+This kit preparation performs no account sign-in, upload, messaging or publication.

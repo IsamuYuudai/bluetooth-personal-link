@@ -1,0 +1,27 @@
+INCLUDED AUDIO
+
+starter_chime.mp3 is a louder edit of the public HQ MP3 preview of:
+"marshall tufton bluetooth.wav" by gecop, published 17 November 2020.
+Source: https://freesound.org/people/gecop/sounds/545028/
+Dedication: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+The creator describes a real Marshall Tufton speaker pairing/disconnection
+recording. It contains chimes, not spoken announcements. This project's edit
+raises the recording by 10 dB and re-encodes it as a 192 kbps MP3. Decoded
+validation found no clipped samples and a -2.4 dBFS true peak. No synthetic
+speech was added. Courtesy credit is retained here.
+
+Original-source SHA256:
+B4A6F90C02E781383826CA85E95EE32134C324327E37D50A9E5F920F5AC3F190
+Included edited-media SHA256:
+0469066EB42C3BA28CC3340F637A596F986A5F0D86ABFED8406CD8B59F8D676F
+
+All additional user audio remains subject to its own permissions. Importing
+a file does not grant permission to publish it in another sound pack.
+
+REQUIRED FRAMEWORKS
+Cyber Engine Tweaks, Audioware and their dependencies are separate projects
+with their own authors and licences. No framework binaries are distributed.
+Cyberpunk 2077 and its game assets belong to their respective rights holders.
+This addon is unofficial and is not endorsed by CD PROJEKT RED or Bluetooth SIG.

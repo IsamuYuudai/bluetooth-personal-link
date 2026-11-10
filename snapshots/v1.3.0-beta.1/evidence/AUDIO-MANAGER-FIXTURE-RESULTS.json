@@ -1,0 +1,61 @@
+{
+    "Schema":  1,
+    "CreatedUtc":  "2026-11-08T22:21:26.1464302Z",
+    "Runtime":  "5.1.26100.9711",
+    "GroupsPassed":  12,
+    "Results":  [
+                    {
+                        "Name":  "Actual WindowsPowerShell5.1 parses manager and unchanged importer",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "NoUI auto-detects ancestor Unicode game path without forms or any target writes",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "NoUI forwards explicit selected pool and Replace mode without target writes",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Invalid audio header is refused before any fixture writes",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Network paths are refused by manager validation",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Manager input cap refuses129recordings",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Manager refuses reparse input folder",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Manager refuses Import while target game process is present",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "GUI-equivalent async runspace imports recording and creates backup/manifest in fakegame",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Repeated append is content-addressed and idempotent",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Replace changes only selected connection pool and preserves other pool",
+                        "Passed":  true
+                    },
+                    {
+                        "Name":  "Externally edited managed manifest is refused without additional writes",
+                        "Passed":  true
+                    }
+                ],
+    "ManagerSHA256":  "251780F3F6B3EE2AAD9290E0570A8B5824850B8755E054F6FA18F35A5834AC3A",
+    "ImporterSHA256":  "B897D013E1419200053038A2BDA527BA69F92CB9B682622FA48500AEB649D61C",
+    "CmdSHA256":  "431960EDD178EB17B1ECDDBDA3B72D2084D715F7F1E4C29948D1394831FC7613",
+    "NoUIOrLiveGameChanges":  true,
+    "Limits":  "Actual WinPS5.1 parser, NoUI read-only and async importer mechanics tested against isolated dummy game/WAV fixtures only. No form was instantiated or displayed. No actual gameplay, Audioware decoding or audible playback was tested. Mutation fixtures mock only process lookup; shipped Import has no bypass and running-game guard tested separately."
+}

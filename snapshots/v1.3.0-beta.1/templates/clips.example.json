@@ -1,0 +1,4 @@
+{
+  "connected": ["bpl_starter_chime", "bpl_my_connection_01"],
+  "disconnected": ["bpl_starter_chime"]
+}

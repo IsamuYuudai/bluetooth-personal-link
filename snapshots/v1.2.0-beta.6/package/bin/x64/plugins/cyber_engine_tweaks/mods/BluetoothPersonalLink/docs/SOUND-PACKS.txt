@@ -1,0 +1,43 @@
+ADDING YOUR OWN RECORDINGS
+
+Use recordings you own or have permission to use. The main download works
+with its included starter chime; no account or extra audio download is needed.
+
+MANUAL METHOD
+1. Close the game.
+2. Create a folder r6\audioware\BluetoothPersonalLinkUserAudio in the game.
+3. Put your WAV, MP3, OGG or FLAC recordings there.
+4. Add an audios.yaml in that folder, using the example below.
+5. Add each unique event ID to the connected array in the CET mod's clips.json.
+6. Restart the game fully. Preview with GetMod("BluetoothPersonalLink").test().
+
+Example audios.yaml:
+version: 1.0.0
+sfx:
+  bpl_my_connection_01:
+    file: my_connection_01.wav
+    usage: in-memory
+    settings:
+      volume: 1.0
+
+Example clips.json:
+{
+  "connected": ["bpl_starter_chime", "bpl_my_connection_01"],
+  "disconnected": ["bpl_starter_chime"]
+}
+
+Use unique letters/digits/underscore event names. Up to 128 unique IDs are
+accepted per pool. A filename by itself is not an Audioware event ID.
+Removing the starter ID from connected makes only your own recordings play.
+The disconnected pool is used only when disconnect announcements are enabled.
+
+OFFLINE IMPORT UTILITY
+The separate creator/source kit includes tools\Import-BPLAudio.ps1. It accepts
+your game and audio folders, creates a user-audio bank, and updates clips.json.
+Use its supplied help and DryRun option first. It uses local files only.
+It is optional; the game addon does not execute the utility.
+
+DISTRIBUTING A SOUND PACK
+Use a unique Audioware folder and event prefix. Include the required credits
+and permissions for every recording. Document how users add your IDs to
+clips.json, and avoid silently replacing their existing settings or sound list.

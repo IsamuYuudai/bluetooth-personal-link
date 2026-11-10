@@ -1,0 +1,87 @@
+# Reproduce the submitted file contents
+
+Copyright 2026 Isamu Yuudai. This new guide is licensed under CC BY 4.0; see LICENSE.md.
+
+## Requirements and scope
+
+Verified reproduction runtime: **PowerShell 7.6.9**, using the built-in .NET ZIP APIs. Windows PowerShell 5.1 syntax was also checked; a full new-builder run under that runtime was not verified. No compiler, Lua runtime, Python, downloaded dependency, game, Vortex or network access is needed for the reproduction step. This repository contains readable scripts rather than a compiled application to rebuild. Historical tooling and runtime requirements for actually running the addon/tests are separate.
+
+Open a PowerShell terminal in the repository directory. Commands below use relative paths. Read the script before running it. If a local execution policy restricts scripts, follow your normal approved script-execution process; the reproduction script does not change execution policy or security settings.
+
+First validate all source bytes without writing files:
+
+```powershell
+& .\tools\Build-SourceReview.ps1 -ValidateOnly
+```
+
+Then reproduce all four artifacts:
+
+```powershell
+& .\tools\Build-SourceReview.ps1 -BuildSubdirectory first
+```
+
+For one version, add `-Version 1.3.0-beta.1` or `-Version 1.2.0-beta.6`. Outputs go only beneath `outputs/<BuildSubdirectory>/`. An existing output directory is refused; nothing is overwritten or removed. Choose a new name for another run.
+
+The builder checks the exact snapshot file list, size and SHA-256 of every file, rejects links and unsafe/colliding archive paths, then creates each ZIP from its explicit entry list. It reopens every output and checks every uncompressed entry against the original manifest. No runtime, import, test, live-game or publishing script is invoked. Historical reports and sources are never regenerated.
+
+New ZIP entries use ordinal path ordering, no compression, zero external attributes and the timestamp `2020-01-01 00:00:00`. This makes repeated builds deterministic on the same tested local runtime, independent of snapshot filesystem timestamps. The contents reproduce the submitted files; the new ZIP encoding/metadata do not reproduce the original container bytes. The builder writes `REPRODUCTION-RESULTS.json` containing both identities with `originalContainerHashExpected=false`. Cross-runtime ZIP-byte identity is not promised.
+
+Verify repeatability locally:
+
+```powershell
+& .\tools\Build-SourceReview.ps1 -BuildSubdirectory second
+$first = Get-Content .\outputs\first\REPRODUCTION-RESULTS.json -Raw | ConvertFrom-Json
+$second = Get-Content .\outputs\second\REPRODUCTION-RESULTS.json -Raw | ConvertFrom-Json
+foreach ($artifact in $first.artifacts) {
+    $match = @($second.artifacts | Where-Object { $_.file -ceq $artifact.file })
+    if ($match.Count -ne 1 -or $match[0].sha256 -cne $artifact.sha256) {
+        throw ('Repeated ZIP hash differs: ' + $artifact.file)
+    }
+}
+```
+
+`.gitattributes` preserves snapshot bytes during checkout. If validation fails after a Git checkout, inspect line-ending conversion or local edits rather than refreshing the historical manifests to hide the difference. A manifest mismatch is a failed reproduction.
+
+## Optional historical tests
+
+The tests are not part of rebuilding the source ZIPs. They exercise local mocks/fixtures, may compile a small in-memory native-call wrapper, and write reports and dummy data. Their reports are historical evidence, not current gameplay acceptance. Never run them directly inside `snapshots/`.
+
+Copy one complete kit to an ignored working directory first:
+
+```powershell
+$working = '.\outputs\test-work\v1.3.0-beta.1'
+if (Test-Path -LiteralPath $working) { throw 'Choose a new test-work directory.' }
+$null = New-Item -ItemType Directory -Path $working
+Copy-Item -LiteralPath '.\snapshots\v1.3.0-beta.1\package', '.\snapshots\v1.3.0-beta.1\tools', '.\snapshots\v1.3.0-beta.1\templates', '.\snapshots\v1.3.0-beta.1\work' -Destination $working -Recurse
+Push-Location $working
+```
+
+From that copy, read the preserved `TESTING-GUIDE.txt` in the source snapshot. With an installed trusted Lua 5.3 CLI:
+
+```powershell
+lua .\work\tests\run-tests.lua
+```
+
+Or explicitly provide a trusted local Lua 5.3 DLL to the PowerShell harness:
+
+```powershell
+& .\work\tests\Test-Bluetooth.ps1 -LuaLibraryPath '<trusted-local-Lua53-DLL>'
+```
+
+No DLL is included or automatically downloaded. The full readable embedded C# P/Invoke source is in `Test-Bluetooth.ps1`. This wrapper is for the optional test harness; the addon does not load a native library itself.
+
+For utility fixture tests, use the historically exercised Windows PowerShell 5.1 runtime:
+
+```powershell
+powershell.exe -NoProfile -File .\work\importer-tests\Test-Importer.ps1
+powershell.exe -NoProfile -File .\work\Test-AudioManager.ps1
+Pop-Location
+```
+
+The audio-manager test exists only in 1.3. For beta6, use the matching copied `v1.2.0-beta.6` kit and omit that command. The fake `.exe` files generated by these tests contain text only and are never launched. Keep all generated output in the ignored working copy. Re-run the source builder's `-ValidateOnly` after testing to confirm the frozen snapshots remain unchanged.
+
+Actual in-game testing requires separately installed supported frameworks, owned game data and an isolated test profile. It is outside this source-reproduction task. No live 1.3 regression, window-interaction, audible or co-op result is claimed here.
+
+## Included audio
+
+The supplied historical MP3 is a fixed, hash-verified input to the content reproduction. Its Freesound creator, CC0 source, original download hash, edited-media hash and known encoding characteristics are recorded in the historical notices and COMPONENTS.md. The exact original FFmpeg command and tool version were not located. This repository does not claim it can regenerate that MP3 bit-for-bit from the recording; it preserves the already-submitted edited bytes.

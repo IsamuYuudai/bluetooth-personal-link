@@ -1,0 +1,38 @@
+Bluetooth Personal Link - Easier audio setup and optional settings integration
+
+Summary
+Give V's personal cable a connection notification. Includes a cleared starter
+chime, optional Native Settings / Unified Mod Settings controls, and a tool that
+imports your own short recordings without hand-editing sound manifests.
+
+Description draft for the new beta (do not publish until live QA is recorded)
+Bluetooth Personal Link plays a local notification after a supported Jack In
+connection completes. The mod observes the personal-link state and leaves device,
+quest and multiplayer logic unchanged.
+
+Vortex installation: install the listed framework requirements, use Mod manager
+download on the main file, then install, enable and Deploy Mods. Restart the game.
+Uninstall through Vortex Disable/Remove followed by Deploy Mods, with the game
+closed. Keep personal inbox recordings and importer backups if you want them.
+
+Controls: Mods > Bluetooth Personal Link with optional Native Settings. Unified
+Mod Settings can aggregate that tab. The CET panel remains available as a fallback
+with volume, boost, cooldown, preview, instructions and diagnostics.
+
+Your own recordings: place short WAV/MP3/OGG/FLAC files into the installed mod's
+audio-inbox/connected or disconnected folder. Close Cyberpunk and run
+BluetoothPersonalLink/docs/tools/Manage-Audio.cmd. Use Open Inbox to open the sound
+folder and Import to generate the manifest and sound selections. Restart Cyberpunk.
+Existing registered selections can reload while playing; stable Audioware does
+not load brand-new sound banks through CET Reload all mods. We do not install a
+development Audioware build to work around this limitation.
+
+The public package includes only its documented cleared starter recording. Supply
+recordings you own or have permission to use. Private crew voice packs are not
+included in the public download.
+
+AI disclosure: code, interface, import tool and documentation developed using
+OpenAI Codex. This is not a claim that the framework dependencies were AI-written.
+The release validation file distinguishes isolated tests, previously verified
+connection playback, and new live regression tests. No universal compatibility or
+absolute malware-free guarantee is implied.

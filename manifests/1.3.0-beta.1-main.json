@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "version": "1.3.0-beta.1",
+  "kind": "main",
+  "sourceRoot": "snapshots/v1.3.0-beta.1",
+  "originalArchive": {
+    "fileName": "Bluetooth-Personal-Link-v1.3.0-beta.1.zip",
+    "nexusFileId": 175773,
+    "bytes": 76212,
+    "sha256": "E74CBC2DFA5BF1FF1B67B2969DFF2CB55D3091F1C55804828A51274CF82E0FEA"
+  },
+  "outputFileName": "Bluetooth-Personal-Link-v1.3.0-beta.1-content-reproduction.zip",
+  "entryCount": 16,
+  "identityScope": "Each entry reproduces its original uncompressed file bytes. Replacement ZIP encoding and metadata differ; its container hash is not the original archive hash.",
+  "entries": [
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/clips.json",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/clips.json",
+      "bytes": 105,
+      "sha256": "10141E89F96CA3477AAD1521D6386FA353C6A1D7466847E7DA70E1E7E18E614F"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/init.lua",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/init.lua",
+      "bytes": 31161,
+      "sha256": "1203C0AD52E3DCA607B388D620AA9DF550A4BD5721FBF7BC61B5980BDD0A35E9"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/settings.json",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/settings.json",
+      "bytes": 113,
+      "sha256": "463176A49067866DE0A7F29F5E69AB8845829757A2A3121C6722F0D0BD7D55D3"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/connected/READ-ME.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/connected/READ-ME.txt",
+      "bytes": 266,
+      "sha256": "E03463D01B58CB246C9D1295E81845CBA82B11EEE9927A50615423B6C89B2801"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/disconnected/READ-ME.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/audio-inbox/disconnected/READ-ME.txt",
+      "bytes": 266,
+      "sha256": "E03463D01B58CB246C9D1295E81845CBA82B11EEE9927A50615423B6C89B2801"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/CHANGELOG.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/CHANGELOG.txt",
+      "bytes": 932,
+      "sha256": "BBB2FF66BD34D4B5D6CCA506A643CBA245E0ED505A8A1E92903C030A3C7AAFA4"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/LICENSE.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/LICENSE.txt",
+      "bytes": 1317,
+      "sha256": "29E61499AE9DCD92E8708B12673311F80894354D76162D31B314C9CAA12C5C6C"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/README.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/README.txt",
+      "bytes": 3001,
+      "sha256": "1DEFF1FE04AEF2FB3C3C0A6B452ECCA0A2FBC3ED09DE5CA2D7A7B3B3006C1A54"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/SOUND-PACKS.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/SOUND-PACKS.txt",
+      "bytes": 3566,
+      "sha256": "5D5863EDCD79E0882F12207B8C809183A966C0C7596E0E614D3A1080878996C2"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/THIRD-PARTY-NOTICES.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/THIRD-PARTY-NOTICES.txt",
+      "bytes": 1313,
+      "sha256": "43FB3B82D2B56CDC8FA53A922B41FD998E6CE3285903AC964D07126466F25D98"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/AUDIO-MANAGER-README.txt",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/AUDIO-MANAGER-README.txt",
+      "bytes": 2280,
+      "sha256": "6CE9C88137F3312BBEDB8E280357D524D23A8EC137058EAB683D67324456D829"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Import-BPLAudio.ps1",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Import-BPLAudio.ps1",
+      "bytes": 12832,
+      "sha256": "B897D013E1419200053038A2BDA527BA69F92CB9B682622FA48500AEB649D61C"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.cmd",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.cmd",
+      "bytes": 273,
+      "sha256": "431960EDD178EB17B1ECDDBDA3B72D2084D715F7F1E4C29948D1394831FC7613"
+    },
+    {
+      "path": "bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.ps1",
+      "sourcePath": "package/bin/x64/plugins/cyber_engine_tweaks/mods/BluetoothPersonalLink/docs/tools/Manage-Audio.ps1",
+      "bytes": 12202,
+      "sha256": "251780F3F6B3EE2AAD9290E0570A8B5824850B8755E054F6FA18F35A5834AC3A"
+    },
+    {
+      "path": "r6/audioware/BluetoothPersonalLink/audios.yaml",
+      "sourcePath": "package/r6/audioware/BluetoothPersonalLink/audios.yaml",
+      "bytes": 122,
+      "sha256": "06E190D8CE16C2437BA7995C2E7671094F1F85B01869A5F8CECA6BF967488526"
+    },
+    {
+      "path": "r6/audioware/BluetoothPersonalLink/starter_chime.mp3",
+      "sourcePath": "package/r6/audioware/BluetoothPersonalLink/starter_chime.mp3",
+      "bytes": 51309,
+      "sha256": "0469066EB42C3BA28CC3340F637A596F986A5F0D86ABFED8406CD8B59F8D676F"
+    }
+  ]
+}

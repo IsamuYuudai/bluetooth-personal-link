@@ -1,0 +1,13 @@
+1.3.0-beta.1 - Candidate, not yet released or tested in the live game
+- Optional Native Settings integration, discoverable through Unified Mod Settings.
+- Wider CET panel with installation and sound-import instructions.
+- Audio inbox detection and a bounded pending import plan with default levels.
+- Added sound-list reload API, clearer restart guidance and audio setup controls.
+- The connection hook, local-player scope and previously tested playback/gain
+  behavior are retained. The package does not alter NightCoop or world time.
+- New sound-bank files still require a full restart with stable Audioware.
+
+Validation status: 52 isolated Lua behavioral groups pass. Live menu integration,
+new inbox setup and audible playback regression testing remain pending. This
+candidate must not be described as fully game-tested until that test is recorded.
+AI disclosure: Code, UI, tools and documentation developed with OpenAI Codex.

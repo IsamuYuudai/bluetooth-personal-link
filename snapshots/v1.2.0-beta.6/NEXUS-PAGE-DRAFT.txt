@@ -1,0 +1,70 @@
+TITLE
+Bluetooth Personal Link - Random Jack-In Sounds
+
+SHORT DESCRIPTION
+Give V's ordinary cable connections a sound of their own. Includes a Bluetooth
+chime, shuffled custom sound pools and a small settings window in CET.
+
+DESCRIPTION
+Bluetooth Personal Link plays local audio after V completes a standard device
+personal-link connection. It is standalone and requires no collection or
+multiplayer mod.
+
+The main file includes one real-device Bluetooth chime, edited 10 dB louder to
+help it stand out over ambience. Install its requirements and restart the game
+fully before testing. This is a chime starter pack, not a
+spoken-announcement voice pack. Add recordings you have permission to use to
+create your own collection of connection announcements.
+
+With several sounds, the addon shuffles the usable pool, covers the pool before
+starting again and avoids immediate repeats. It filters out other players'
+connections, cancelled attempts and duplicate callbacks. Missing audio is
+skipped. Volume, a 0-24 dB notification boost, cooldown and optional disconnect
+audio are configurable in CET. Extra boost defaults to zero and changes only
+this addon's next notification, leaving game-wide audio settings untouched.
+
+REQUIREMENTS
+Cyber Engine Tweaks and Audioware, plus their dependencies.
+Install framework versions compatible with your Cyberpunk 2077 installation.
+Audioware guide: https://cyb3rpsych0s1s.github.io/audioware/
+CET: https://wiki.redmodding.org/cyber-engine-tweaks
+
+INSTALLATION
+Close the game. Install with Vortex or merge bin and r6 into the game folder.
+Restart fully whenever adding audio. Open CET for settings. Press the preview
+button, then close CET and game menus within 30 seconds to hear the queued test
+in unpaused gameplay. Disabling the addon or resetting the session cancels it.
+
+CUSTOM AUDIO
+See SOUND-PACKS.txt. WAV, MP3, OGG and FLAC audio can be registered through
+Audioware. The optional offline utility in the creator kit imports local files.
+Only distribute recordings when you have the appropriate reuse permissions.
+
+KNOWN LIMITATIONS
+This beta targets Cyberpunk 2077 2.5. Automated tests cover Lua behavior with
+mocked game/audio/UI objects. On 8 November 2026, game-loopback captures verified
+the louder starter preview and beta.4 output during a normal Jack In interaction
+at one Watson/Northside access point, including its breach-screen transition.
+Recorded output matched the chime across its duration; this is not a guarantee
+of perceived loudness. Standard Device connections are supported by the hook
+design. Vehicles, special props and scripted story scenes may use different
+systems and remain unverified. Live multiplayer compatibility and performance
+improvements are not claimed. Each player's sounds are local.
+The beta.6 boost control was verified at +20 dB during a physical access-point connection using separately supplied audio; the tester confirmed the volume.
+
+UNINSTALLATION
+With the game closed, remove only the BluetoothPersonalLink CET and Audioware
+folders. Back up user recordings before removing an optional user-audio bank.
+
+CREDITS AND PERMISSIONS
+Starter sound: +10 dB louder edit and MP3 re-encode of
+"marshall tufton bluetooth.wav" by gecop, Freesound, CC0 1.0.
+Source: https://freesound.org/people/gecop/sounds/545028/
+Licence: https://creativecommons.org/publicdomain/zero/1.0/
+Project code and documentation: MIT; see LICENSE.txt.
+Required frameworks retain their own authorship and licences and are not bundled.
+
+AI DISCLOSURE
+OpenAI Codex generated the Lua code, UI, offline utility and documentation,
+including this page draft. Automated tests and review were used. The included
+real-world chime recording is not AI-generated audio.

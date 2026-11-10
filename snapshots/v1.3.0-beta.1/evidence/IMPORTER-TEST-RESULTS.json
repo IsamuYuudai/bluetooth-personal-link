@@ -1,0 +1,23 @@
+{
+    "pass":  true,
+    "checkedUtc":  "2026-11-08T22:14:32.0717318Z",
+    "powershell":  "5.1.26100.9711",
+    "scriptSHA256":  "B897D013E1419200053038A2BDA527BA69F92CB9B682622FA48500AEB649D61C",
+    "checks":  [
+                   "Dry run validates and reports deduplicated results without creating files or directories",
+                   "Append imports unique content, retains the other pool/settings, and backs up the original list",
+                   "Repeated identical import is idempotent and creates no extra files or backups",
+                   "Later imports preserve existing audio registrations and back up the prior manifest",
+                   "Replace and Disconnected modes change only the selected pool and retain imported files",
+                   "Invalid media headers fail before changing the target",
+                   "Unmanaged manifests are preserved and rejected",
+                   "Conflicting imported filenames cannot overwrite existing content",
+                   "The 128-recording pool limit is enforced before writes",
+                   "Writes to a running game are blocked while DryRun remains read-only",
+                   "PowerShell syntax passes and atomic commit leaves no temporary files"
+               ],
+    "groups":  11,
+    "liveGameModified":  false,
+    "networkUsed":  false,
+    "gameExecuted":  false
+}

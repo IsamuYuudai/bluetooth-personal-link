@@ -1,0 +1,35 @@
+BLUETOOTH PERSONAL LINK - PUBLISHING GUIDE
+
+PUBLIC FILES
+Main beta ZIP: installable game addon, cleared starter audio and user docs.
+Creator/source ZIP: source, offline import utility, examples and page draft.
+Do not upload this outer creator kit as the main installable game download.
+
+BEFORE PUBLICATION
+1. Test on a clean compatible framework setup: preview, ordinary terminal,
+   access point, cancelled connection, reconnect, save/load, volume, disable,
+   settings save/restart and sound import. Record which game/framework versions
+   passed. The included draft records the one access-point test already verified;
+   do not expand its compatibility claims until the additional tests pass.
+2. Capture your own in-game screenshots or demonstration. No promotional image
+   or screenshot has been fabricated or included in this kit.
+3. Use the main beta ZIP for the main Nexus file and the creator/source ZIP as
+   an optional source/modder file. Verify version, name and dependencies.
+4. Review and edit NEXUS-PAGE-DRAFT.txt before using it. It accurately describes
+   one included chime and optional user audio, not a bundled spoken voice pack.
+
+RIGHTS
+Only the cleared default recording belongs in this public release. Other
+recordings need their own reuse permissions before you publish them. Keep
+credits visible. The supplied code licence and audio dedication are separate.
+https://help.nexusmods.com/article/28-file-submission-guidelines
+
+AI FIELDS
+Use AI-Generated Content for the predominantly Codex-produced code/UI/docs.
+The supplied page draft also falls under AI Media. State the tool and outputs;
+do not describe the work as only AI Assisted. Complete the current upload form's
+disclosure/permission fields and recheck the rules when publishing later.
+https://help.nexusmods.com/article/180-ai-policy-changes-2026
+
+Choose your Nexus account author identity and page permission preferences.
+No account action, upload or publication was performed while preparing this kit.
